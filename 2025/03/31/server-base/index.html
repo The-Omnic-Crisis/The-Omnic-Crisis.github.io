@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="连接服务器：请使用 vscode。下载 vscode 后，安装插件 Remote-SSH。Windows 用户这里需要特殊处理，即：打开 terminal，输入以下四个指令  1234icacls &quot;C:\Users\Administrator\.ssh\config&quot;icacls &quot;C:\Users\Administrator\.ssh\config&quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/03/31/hello-world/index.html">
+<meta property="og:title" content="服务器基础">
+<meta property="og:url" content="http://example.com/2025/03/31/server-base/index.html">
 <meta property="og:site_name" content="The Omnic Crisis&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="连接服务器：请使用 vscode。下载 vscode 后，安装插件 Remote-SSH。Windows 用户这里需要特殊处理，即：打开 terminal，输入以下四个指令  1234icacls &quot;C:\Users\Administrator\.ssh\config&quot;icacls &quot;C:\Users\Administrator\.ssh\config&quot;">
 <meta property="og:locale">
 <meta property="article:published_time" content="2025-03-31T07:29:28.817Z">
-<meta property="article:modified_time" content="2025-03-31T07:29:28.817Z">
+<meta property="article:modified_time" content="2025-03-31T16:44:42.197Z">
 <meta property="article:author" content="The Omnic Crisis">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2025/03/31/hello-world/">
+<link rel="canonical" href="http://example.com/2025/03/31/server-base/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Hello World | The Omnic Crisis's blog</title>
+  <title>服务器基础 | The Omnic Crisis's blog</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/31/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/31/server-base/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          服务器基础
         </h1>
 
         <div class="post-meta">
@@ -175,6 +175,13 @@
 
               <time title="Created: 2025-03-31 15:29:28" itemprop="dateCreated datePublished" datetime="2025-03-31T15:29:28+08:00">2025-03-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-04-01 00:44:42" itemprop="dateModified" datetime="2025-04-01T00:44:42+08:00">2025-04-01</time>
+              </span>
 
           
 
@@ -187,19 +194,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <ol>
+<li>连接服务器：请使用 vscode。下载 vscode 后，安装插件 Remote-SSH。Windows 用户这里需要特殊处理，即：打开 terminal，输入以下四个指令</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot;</span><br><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot; /remove &quot;Everyone&quot;</span><br><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot; /inheritance:r</span><br><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot; /grant &quot;Everyone:R&quot;</span><br></pre></td></tr></table></figure>
+<p>安装完成后，打开 vscode 左边栏出现的小电脑，输入 ssh -p port username@ip，其中 port 是你的端口号，username 是你的用户名 (比如 root)，ip 是服务器地址。这样可以成功进入到服务器。然后点击出现的 Open，就可以打开相应的文件夹了。<br>2. 下载模型：<a target="_blank" rel="noopener" href="https://hf-mirror.com/%EF%BC%8C%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8">https://hf-mirror.com/，查看方法三：使用</a> hfd。注意：需要执行以下两个指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install aria2</span><br><span class="line">apt install git-lfs</span><br></pre></td></tr></table></figure>
+<p>下载模型则在网站上搜索，比如 Qwen2.5-0.5B，进入 <a target="_blank" rel="noopener" href="https://hf-mirror.com/Qwen/Qwen2.5-0.5B">https://hf-mirror.com/Qwen/Qwen2.5-0.5B</a> 后，点击上边的复制按钮，即 Qwen&#x2F;Qwen2.5-0.5B，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hfd.sh Qwen/Qwen2.5-0.5B</span><br></pre></td></tr></table></figure>
+<p>即可下载。数据集同理。<br>3. 安装环境。使用 miniconda&#x2F;anaconda 管理，具体可以随便百度搜索获得。pip 安装之前，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip</span><br><span class="line">pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure>
+<p>这样可以用清华源作为镜像。<br>特殊地，对于 pytorch，首先进入<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">官网</a>，然后找到 cuda 的对应版本，比如 cuda 11.8 和指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu118</span><br></pre></td></tr></table></figure>
+<p>进入<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/pytorch-wheels/?spm=a2c6h.13651104.d-5273.1.33b81274XREsuE">网站</a>，搜索 cu118，进入后就可以搜索相应 python 和 linux 版本的 torch, torchvision, torchaudio，然后用 wget 下载，下载完后本地用 pip install 安装对应的包。<br>4. 运行代码。tmux&#x2F;screen&#x2F;nohup，推荐前两者。先用 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s xxxx</span><br></pre></td></tr></table></figure>
+<p>创建一个新的窗口，之后使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux attach -t xxxx</span><br></pre></td></tr></table></figure>
+<p>可以进入。tmux ls 可以查看有哪些窗口。在窗口里运行代码，防止关闭 ssh 等于关闭代码。<br>5. 一些技巧。关闭一个程序运行的代码可以使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pgrep -f xxxx.py/xxxx.sh/...</span><br><span class="line">kill -9 xxx</span><br></pre></td></tr></table></figure>
+<p>在 vscode 中打开一个文件可以在 terminal 中使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code xxxx</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -214,11 +228,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2025/03/31/server-base/" rel="prev" title="服务器基础">
-      <i class="fa fa-chevron-left"></i> 服务器基础
-    </a></div>
       <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2025/03/31/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -277,7 +291,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -211,6 +211,90 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/31/server-base/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="The Omnic Crisis">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="The Omnic Crisis's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/03/31/server-base/" class="post-title-link" itemprop="url">服务器基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2025-03-31 15:29:28" itemprop="dateCreated datePublished" datetime="2025-03-31T15:29:28+08:00">2025-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-04-01 00:44:42" itemprop="dateModified" datetime="2025-04-01T00:44:42+08:00">2025-04-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>连接服务器：请使用 vscode。下载 vscode 后，安装插件 Remote-SSH。Windows 用户这里需要特殊处理，即：打开 terminal，输入以下四个指令</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot;</span><br><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot; /remove &quot;Everyone&quot;</span><br><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot; /inheritance:r</span><br><span class="line">icacls &quot;C:\Users\Administrator\.ssh\config&quot; /grant &quot;Everyone:R&quot;</span><br></pre></td></tr></table></figure>
+<p>安装完成后，打开 vscode 左边栏出现的小电脑，输入 ssh -p port username@ip，其中 port 是你的端口号，username 是你的用户名 (比如 root)，ip 是服务器地址。这样可以成功进入到服务器。然后点击出现的 Open，就可以打开相应的文件夹了。<br>2. 下载模型：<a target="_blank" rel="noopener" href="https://hf-mirror.com/%EF%BC%8C%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8">https://hf-mirror.com/，查看方法三：使用</a> hfd。注意：需要执行以下两个指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install aria2</span><br><span class="line">apt install git-lfs</span><br></pre></td></tr></table></figure>
+<p>下载模型则在网站上搜索，比如 Qwen2.5-0.5B，进入 <a target="_blank" rel="noopener" href="https://hf-mirror.com/Qwen/Qwen2.5-0.5B">https://hf-mirror.com/Qwen/Qwen2.5-0.5B</a> 后，点击上边的复制按钮，即 Qwen&#x2F;Qwen2.5-0.5B，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hfd.sh Qwen/Qwen2.5-0.5B</span><br></pre></td></tr></table></figure>
+<p>即可下载。数据集同理。<br>3. 安装环境。使用 miniconda&#x2F;anaconda 管理，具体可以随便百度搜索获得。pip 安装之前，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip</span><br><span class="line">pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure>
+<p>这样可以用清华源作为镜像。<br>特殊地，对于 pytorch，首先进入<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/previous-versions/">官网</a>，然后找到 cuda 的对应版本，比如 cuda 11.8 和指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --index-url https://download.pytorch.org/whl/cu118</span><br></pre></td></tr></table></figure>
+<p>进入<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/pytorch-wheels/?spm=a2c6h.13651104.d-5273.1.33b81274XREsuE">网站</a>，搜索 cu118，进入后就可以搜索相应 python 和 linux 版本的 torch, torchvision, torchaudio，然后用 wget 下载，下载完后本地用 pip install 安装对应的包。<br>4. 运行代码。tmux&#x2F;screen&#x2F;nohup，推荐前两者。先用 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s xxxx</span><br></pre></td></tr></table></figure>
+<p>创建一个新的窗口，之后使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux attach -t xxxx</span><br></pre></td></tr></table></figure>
+<p>可以进入。tmux ls 可以查看有哪些窗口。在窗口里运行代码，防止关闭 ssh 等于关闭代码。<br>5. 一些技巧。关闭一个程序运行的代码可以使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pgrep -f xxxx.py/xxxx.sh/...</span><br><span class="line">kill -9 xxx</span><br></pre></td></tr></table></figure>
+<p>在 vscode 中打开一个文件可以在 terminal 中使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code xxxx</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
 
@@ -277,7 +361,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
